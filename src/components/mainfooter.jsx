@@ -11,7 +11,6 @@ const MainFooter = () => {
         className="bg-[#E7E5DF] text-[#03330a] py-4 flex flex-col md:flex-row"
         md:height="h-[100px]"
       >
-        <div>test div</div>
         {/* Div pertama */}
         <div className="w-full md:w-1/2 flex items-center justify-center mb-4 md:mb-0">
           <h3 className="text-[20px] md:text-[24px] font-bold">
