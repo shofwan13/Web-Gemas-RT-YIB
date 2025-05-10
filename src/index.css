@@ -1,1 +1,55 @@
 @import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+* {
+  font-family: "DMSans";
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+h4 {
+  font-size: 24px;
+  font-weight: 700;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "DMSans";
+  font-weight: 300;
+  src: url(./assets/fonts/DM_Sans/static/DMSans-Light.ttf);
+}
+@font-face {
+  font-family: "DMSans";
+  font-weight: 400;
+  src: url(./assets/fonts/DM_Sans/static/DMSans-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DMSans";
+  font-weight: 500;
+  src: url(./assets/fonts/DM_Sans/static/DMSans-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DMSans";
+  font-weight: 700;
+  src: url(./assets/fonts/DM_Sans/static/DMSans-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DMSans";
+  font-weight: 800;
+  src: url(./assets/fonts/DM_Sans/static/DMSans-ExtraBold.ttf)
+    format("truetype");
+}
