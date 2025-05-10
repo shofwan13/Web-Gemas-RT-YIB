@@ -36,6 +36,12 @@ const MainHeader = () => {
               Blogs
             </Link>
           </li>
+          <li className="text-white hover:text-gray-300">
+            <FontAwesomeIcon icon={"fa-feather"} className="text-inherit" />
+            <Link to={"/blogs"} className="ml-[12px] text-[16px] text-inherit">
+              Blogs
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
