@@ -8,25 +8,31 @@ const MainFooter = () => {
   return (
     <>
       <div
-        className="bg-[#E7E5DF] text-[#03330a] py-4 flex flex-col md:flex-row"
+        className="bg-[#F4F4F4] text-[#03330a] py-4 flex flex-col"
         md:height="h-[100px]"
       >
         {/* Div pertama */}
-        <div className="w-full md:w-1/2 flex items-center justify-center mb-4 md:mb-0">
+        <div className="w-full container mx-auto text-center">
           <h3 className="text-[20px] md:text-[24px] font-bold">
-            Mengenai Saya
+            Gerakan Mengelola Sampah Rumah Tangga
           </h3>
+          <p>
+            Gerakan kami memberikan solusi nyata untuk masyarakat dan lingkungan
+            sekitar dengan menerapkan sistem pengelolaan sampah yang lebih baik
+            dan berkelanjutan
+          </p>
         </div>
 
         {/* Div kedua */}
-        <div className="w-full md:w-1/2 container mx-auto text-center md:text-left">
+        <div className="w-full container mx-auto text-center">
           <h3 className="text-[20px] md:text-[24px] font-bold mb-2">
-            Connect with Me
+            Terhubung dengan kami
           </h3>
           <p className="text-sm md:text-base">
-            Connect and s with me on social media:
+            Tetap terhubung dengan kami di media sosial untuk mendapatkan update
+            dan informasi kegiatan terbaru.
           </p>
-          <div className="flex justify-center md:justify-start space-x-4 py-2">
+          <div className="flex justify-center space-x-4 py-2">
             <ButtonSocial
               icon={"fa-brands fa-facebook"}
               label="Facebook"
@@ -55,10 +61,7 @@ const MainFooter = () => {
         </div>
       </div>
       <div className=" mx-auto text-center py-4 bg-[#32292f] text-white">
-        <p>
-          &copy; {currentYear} oleh Shofwan. Dibuat dengan{" "}
-          <FontAwesomeIcon icon={"mug-hot"} />
-        </p>
+        <p>&copy; {currentYear} oleh Yayasan Indah Berbagi</p>
       </div>
     </>
   );
