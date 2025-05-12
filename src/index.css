@@ -2,14 +2,31 @@
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
 
+.outerheaderaccordion {
+  border: 0px !important;
+  border-style: hidden !important;
+}
+
+.headtitleaccordion {
+  background-color: antiquewhite !important;
+  color: #000000 !important;
+  border: 0px !important;
+}
+
+.bodyaccordioncontent {
+  background-color: #ffffff !important;
+}
+
 .btntabs button {
-    background-color: #057a55 !important;
-    color: white !important;
-    cursor: pointer !important;
+  background-color: #057a55 !important;
+  color: white !important;
+  cursor: pointer !important;
 }
 .btntabs button:hover {
-    background-color: #046C4Eed !important;
-    
+  background-color: #046c4eed !important;
+}
+.btntabs button:active {
+  background-color: #023023ed !important;
 }
 
 * {

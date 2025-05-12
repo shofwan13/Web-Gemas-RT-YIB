@@ -2,7 +2,17 @@ import React from "react";
 import { useEffect } from "react";
 import MainHeader from "../components/mainheader";
 import MainFooter from "../components/mainfooter";
-import { Button, Card, TabItem, Tabs } from "flowbite-react";
+import {
+  Button,
+  Card,
+  TabItem,
+  Tabs,
+  Accordion,
+  AccordionContent,
+  AccordionPanel,
+  AccordionTitle,
+  Carousel,
+} from "flowbite-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
@@ -202,49 +212,169 @@ const Home = () => {
                 className="btntabs items-center"
               >
                 <TabItem color="green" active title="Pengadaan Sarana">
-                  This is{" "}
-                  <span className="font-medium text-gray-800 dark:text-white">
-                    Profile tab's associated content
-                  </span>
-                  . Clicking another tab will toggle the visibility of this one
-                  for the next. The tab JavaScript swaps classes to control the
-                  content visibility and styling.
+                  <div className="flex flex-wrap gap-4 items-center justify-center">
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 1"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 2"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 3"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 4"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 5"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 6"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 7"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                  </div>
                 </TabItem>
                 <TabItem
                   title="Sosialisasi dan Edukasi"
                   className="bg-green-500 !text-white hover:!bg-green-600"
                 >
-                  This is{" "}
-                  <span className="font-medium text-gray-800 dark:text-white">
-                    Dashboard tab's associated content
-                  </span>
-                  . Clicking another tab will toggle the visibility of this one
-                  for the next. The tab JavaScript swaps classes to control the
-                  content visibility and styling.
+                  <div className="flex flex-wrap gap-4 items-center justify-center">
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 1"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 2"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 3"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 4"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 5"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 6"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 7"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                  </div>
                 </TabItem>
                 <TabItem
                   title="Event Kegiatan"
                   className="!bg-green-500 !text-white hover:!bg-green-600"
                 >
-                  This is{" "}
-                  <span className="font-medium text-gray-800 dark:text-white">
-                    Settings tab's associated content
-                  </span>
-                  . Clicking another tab will toggle the visibility of this one
-                  for the next. The tab JavaScript swaps classes to control the
-                  content visibility and styling.
+                  <div className="flex flex-wrap gap-4 items-center justify-center">
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 1"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 2"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 3"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 4"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 5"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 6"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 7"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                  </div>
                 </TabItem>
                 <TabItem
                   title="Daur Ulang"
                   className="!bg-green-500 !text-white hover:!bg-green-600"
                 >
-                  This is{" "}
-                  <span className="font-medium text-gray-800 dark:text-white">
-                    Contacts tab's associated content
-                  </span>
-                  . Clicking another tab will toggle the visibility of this one
-                  for the next. The tab JavaScript swaps classes to control the
-                  content visibility and styling.
+                  <div className="flex flex-wrap gap-4 items-center justify-center">
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 1"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 2"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 3"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 4"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 5"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 6"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 7"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                  </div>
                 </TabItem>
               </Tabs>
             </div>
@@ -275,7 +405,78 @@ const Home = () => {
           </div>
           <div className="bg-green-200 w-full space-y-[28px] items-center justify-center h-[100%]">
             <div className="flex flex-wrap bg-amber-200 justify-center items-center gap-4 h-[100%]">
-              test
+              <Accordion className="items-center flex-col w-[100%]">
+                <AccordionPanel className="outerheaderaccordion">
+                  <AccordionTitle className="headtitleaccordion">
+                    <h4>What is Flowbite?</h4>
+                  </AccordionTitle>
+                  <AccordionContent className="bodyaccordioncontent">
+                    <h4>Question:</h4>
+                    <p className="mb-2 text-gray-500 dark:text-gray-400">
+                      Flowbite is an open-source library of interactive
+                      components built on top of Tailwind CSS including buttons,
+                      dropdowns, modals, navbars, and more.
+                    </p>
+                    <p className="text-gray-500 dark:text-gray-400">
+                      Check out this guide to learn how to&nbsp;
+                      <a
+                        href="https://flowbite.com/docs/getting-started/introduction/"
+                        className="text-cyan-600 hover:underline dark:text-cyan-500"
+                      >
+                        get started&nbsp;
+                      </a>
+                      and start developing websites even faster with components
+                      on top of Tailwind CSS.
+                    </p>
+                  </AccordionContent>
+                </AccordionPanel>
+                <AccordionPanel className>
+                  <AccordionTitle className="headtitleaccordion">
+                    <h4>What is Flowbite?</h4>
+                  </AccordionTitle>
+                  <AccordionContent className="bodyaccordioncontent">
+                    <p className="mb-2 text-gray-500 dark:text-gray-400">
+                      Flowbite is an open-source library of interactive
+                      components built on top of Tailwind CSS including buttons,
+                      dropdowns, modals, navbars, and more.
+                    </p>
+                    <p className="text-gray-500 dark:text-gray-400">
+                      Check out this guide to learn how to&nbsp;
+                      <a
+                        href="https://flowbite.com/docs/getting-started/introduction/"
+                        className="text-cyan-600 hover:underline dark:text-cyan-500"
+                      >
+                        get started&nbsp;
+                      </a>
+                      and start developing websites even faster with components
+                      on top of Tailwind CSS.
+                    </p>
+                  </AccordionContent>
+                </AccordionPanel>
+                <AccordionPanel className>
+                  <AccordionTitle className="headtitleaccordion">
+                    <h4>What is Flowbite?</h4>
+                  </AccordionTitle>
+                  <AccordionContent className="bodyaccordioncontent">
+                    <p className="mb-2 text-gray-500 dark:text-gray-400">
+                      Flowbite is an open-source library of interactive
+                      components built on top of Tailwind CSS including buttons,
+                      dropdowns, modals, navbars, and more.
+                    </p>
+                    <p className="text-gray-500 dark:text-gray-400">
+                      Check out this guide to learn how to&nbsp;
+                      <a
+                        href="https://flowbite.com/docs/getting-started/introduction/"
+                        className="text-cyan-600 hover:underline dark:text-cyan-500"
+                      >
+                        get started&nbsp;
+                      </a>
+                      and start developing websites even faster with components
+                      on top of Tailwind CSS.
+                    </p>
+                  </AccordionContent>
+                </AccordionPanel>
+              </Accordion>
             </div>
           </div>
         </div>
