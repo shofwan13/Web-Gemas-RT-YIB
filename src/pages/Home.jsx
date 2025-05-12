@@ -27,6 +27,7 @@ const Home = () => {
               yang lebih baik dan berkelanjutan.
             </p>
             <Button
+              color={"green"}
               className="flex gap-[10px] cursor-pointer"
               onClick={() => {
                 const element = document.getElementById(
@@ -198,13 +199,9 @@ const Home = () => {
               <Tabs
                 aria-label="Default tabs"
                 variant="pills"
-                className="w-[100%] border-0"
+                className="btntabs items-center"
               >
-                <TabItem
-                  active
-                  title="Pengadaan Sarana"
-                  className="!bg-green-500 !text-white hover:!bg-green-600"
-                >
+                <TabItem color="green" active title="Pengadaan Sarana">
                   This is{" "}
                   <span className="font-medium text-gray-800 dark:text-white">
                     Profile tab's associated content
@@ -215,7 +212,7 @@ const Home = () => {
                 </TabItem>
                 <TabItem
                   title="Sosialisasi dan Edukasi"
-                  className="!bg-green-500 !text-white hover:!bg-green-600"
+                  className="bg-green-500 !text-white hover:!bg-green-600"
                 >
                   This is{" "}
                   <span className="font-medium text-gray-800 dark:text-white">

@@ -2,6 +2,16 @@
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
 
+.btntabs button {
+    background-color: #057a55 !important;
+    color: white !important;
+    cursor: pointer !important;
+}
+.btntabs button:hover {
+    background-color: #046C4Eed !important;
+    
+}
+
 * {
   font-family: "DMSans";
 }

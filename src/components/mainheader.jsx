@@ -24,7 +24,7 @@ const MainHeader = ({ title }) => {
   }, []);
 
   return (
-    <div className="flex items-center content-center justify-start bg-[#03330a]  h-full py-[8px] px-[16px] sticky top-0 z-10">
+    <div className="flex items-center justify-start bg-[#03330a] h-full py-[8px] px-[16px] sticky top-0 z-10">
       {/* Logo and website title */}
       <div className="flex items-center justify-between w-[1440px] bg-amber-900 ">
         <div className="flex content-center items-center">
