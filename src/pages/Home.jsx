@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import MainHeader from "../components/mainheader";
 import MainFooter from "../components/mainfooter";
 import {
@@ -18,6 +18,7 @@ import { Link } from "react-router-dom";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 
 const Home = () => {
+  const [activeTab, setActiveTab] = useState("Pengadaan Sarana");
   return (
     <div>
       <MainHeader />
@@ -81,10 +82,10 @@ const Home = () => {
                   className="w-[100px] h-[100px]"
                   src="https://placehold.co/100x100"
                 ></img>
-                <h5 className="text-2xl text-dark-800 font-bold tracking-tight">
+                <h5 className="text-2xl  font-bold tracking-tight">
                   Pemisahan sampah berdasarkan jenisnya
                 </h5>
-                <p className="font-normal text-gray-700 dark:text-gray-700!important">
+                <p className="font-normal text-gray-700">
                   Here are the biggest enterprise technology acquisitions of
                   2021 so far, in reverse chronological order.
                 </p>
@@ -98,10 +99,10 @@ const Home = () => {
                   className="w-[100px] h-[100px]"
                   src="https://placehold.co/100x100"
                 ></img>
-                <h5 className="text-2xl text-dark-800 font-bold tracking-tight">
+                <h5 className="text-2xl  font-bold tracking-tight">
                   Pemisahan sampah berdasarkan jenisnya
                 </h5>
-                <p className="font-normal text-gray-700 dark:text-gray-700!important">
+                <p className="font-normal text-gray-700">
                   Here are the biggest enterprise technology acquisitions of
                   2021 so far, in reverse chronological order.
                 </p>
@@ -115,10 +116,10 @@ const Home = () => {
                   className="w-[100px] h-[100px]"
                   src="https://placehold.co/100x100"
                 ></img>
-                <h5 className="text-2xl text-dark-800 font-bold tracking-tight">
+                <h5 className="text-2xl  font-bold tracking-tight">
                   Pemisahan sampah berdasarkan jenisnya
                 </h5>
-                <p className="font-normal text-gray-700 dark:text-gray-700!important">
+                <p className="font-normal text-gray-700">
                   Here are the biggest enterprise technology acquisitions of
                   2021 so far, in reverse chronological order.
                 </p>
@@ -132,10 +133,10 @@ const Home = () => {
                   className="w-[100px] h-[100px]"
                   src="https://placehold.co/100x100"
                 ></img>
-                <h5 className="text-2xl text-dark-800 font-bold tracking-tight">
+                <h5 className="text-2xl  font-bold tracking-tight">
                   Pemisahan sampah berdasarkan jenisnya
                 </h5>
-                <p className="font-normal text-gray-700 dark:text-gray-700!important">
+                <p className="font-normal text-gray-700">
                   Here are the biggest enterprise technology acquisitions of
                   2021 so far, in reverse chronological order.
                 </p>
@@ -149,10 +150,10 @@ const Home = () => {
                   className="w-[100px] h-[100px]"
                   src="https://placehold.co/100x100"
                 ></img>
-                <h5 className="text-2xl text-dark-800 font-bold tracking-tight">
+                <h5 className="text-2xl  font-bold tracking-tight">
                   Pemisahan sampah berdasarkan jenisnya
                 </h5>
-                <p className="font-normal text-gray-700 dark:text-gray-700!important">
+                <p className="font-normal text-gray-700">
                   Here are the biggest enterprise technology acquisitions of
                   2021 so far, in reverse chronological order.
                 </p>
@@ -166,10 +167,10 @@ const Home = () => {
                   className="w-[100px] h-[100px]"
                   src="https://placehold.co/100x100"
                 ></img>
-                <h5 className="text-2xl text-dark-800 font-bold tracking-tight">
+                <h5 className="text-2xl  font-bold tracking-tight">
                   Pemisahan sampah berdasarkan jenisnya
                 </h5>
-                <p className="font-normal text-gray-700 dark:text-gray-700!important">
+                <p className="font-normal text-gray-700">
                   Here are the biggest enterprise technology acquisitions of
                   2021 so far, in reverse chronological order.
                 </p>
@@ -211,7 +212,17 @@ const Home = () => {
                 variant="pills"
                 className="btntabs items-center"
               >
-                <TabItem color="green" active title="Pengadaan Sarana">
+                <TabItem
+                  color="green"
+                  active={activeTab === "Pengadaan Sarana"}
+                  title="Pengadaan Sarana"
+                  onClick={() => setActiveTab("Pengadaan Sarana")}
+                  className={`${
+                    activeTab === "Pengadaan Sarana"
+                      ? "bg-green-500 text-white"
+                      : ""
+                  }`}
+                >
                   <div className="flex flex-wrap gap-4 items-center justify-center">
                     <img
                       src="https://placehold.co/300x220"
@@ -220,39 +231,51 @@ const Home = () => {
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 2"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 3"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 4"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 5"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 6"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 7"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 1"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    {/* Add other images here */}
                   </div>
                 </TabItem>
                 <TabItem
                   title="Sosialisasi dan Edukasi"
-                  className="bg-green-500 !text-white hover:!bg-green-600"
+                  active={activeTab === "Sosialisasi dan Edukasi"}
+                  onClick={() => setActiveTab("Sosialisasi dan Edukasi")}
+                  className={`${
+                    activeTab === "Sosialisasi dan Edukasi"
+                      ? "bg-green-500 text-white"
+                      : ""
+                  }`}
                 >
                   <div className="flex flex-wrap gap-4 items-center justify-center">
                     <img
@@ -262,39 +285,51 @@ const Home = () => {
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 2"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 3"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 4"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 5"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 6"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 7"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 1"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    {/* Add other images here */}
                   </div>
                 </TabItem>
                 <TabItem
                   title="Event Kegiatan"
-                  className="!bg-green-500 !text-white hover:!bg-green-600"
+                  active={activeTab === "Event Kegiatan"}
+                  onClick={() => setActiveTab("Event Kegiatan")}
+                  className={`${
+                    activeTab === "Event Kegiatan"
+                      ? "bg-green-500 text-white"
+                      : ""
+                  }`}
                 >
                   <div className="flex flex-wrap gap-4 items-center justify-center">
                     <img
@@ -304,39 +339,49 @@ const Home = () => {
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 2"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 3"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 4"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 5"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 6"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 7"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 1"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    {/* Add other images here */}
                   </div>
                 </TabItem>
                 <TabItem
                   title="Daur Ulang"
-                  className="!bg-green-500 !text-white hover:!bg-green-600"
+                  active={activeTab === "Daur Ulang"}
+                  onClick={() => setActiveTab("Daur Ulang")}
+                  className={`${
+                    activeTab === "Daur Ulang" ? "bg-green-500 text-white" : ""
+                  }`}
                 >
                   <div className="flex flex-wrap gap-4 items-center justify-center">
                     <img
@@ -346,34 +391,40 @@ const Home = () => {
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 2"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 3"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 4"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 5"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 6"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
                     <img
                       src="https://placehold.co/300x220"
-                      alt="Image 7"
+                      alt="Image 1"
                       className="object-cover border-0 rounded-[12px]"
                     />
+                    <img
+                      src="https://placehold.co/300x220"
+                      alt="Image 1"
+                      className="object-cover border-0 rounded-[12px]"
+                    />
+                    {/* Add other images here */}
                   </div>
                 </TabItem>
               </Tabs>
@@ -383,12 +434,12 @@ const Home = () => {
       </section>
       <section
         id="faqpertanyaan"
-        className="bg-[#e15ee1] h-[100%] sm:px-10 flex gap-4 items-center justify-center flex-row my-10"
+        className="bg-[#e15ee1] h-[100%] sm:px-10 flex gap-4 items-center justify-center my-10"
       >
-        <div className="w-[1440px] h bg-violet-600 flex flex-col justify-center content-center items-center gap-y-4">
-          <div className="flex bg-green-200 w-[540px] h-[100%] justify-center items-center flex-col space-y-[28px]">
-            <div className="space-y-[8px] items-center text-center">
-              <div className="flex justify-center items-center">
+        <div className="w-[1440px] h bg-violet-600 flex  flex-row justify-center content-center items-center gap-4">
+          <div className="bg-green-200 w-[50%] h-[100%] flex-col space-y-[28px]">
+            <div className="space-y-[8px] w-[540px] items-left text-left">
+              <div className="">
                 <img
                   className=""
                   src="https://placehold.co/100x100"
@@ -403,81 +454,51 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="bg-green-200 w-full space-y-[28px] items-center justify-center h-[100%]">
-            <div className="flex flex-wrap bg-amber-200 justify-center items-center gap-4 h-[100%]">
-              <Accordion className="items-center flex-col w-[100%]">
-                <AccordionPanel className="outerheaderaccordion">
-                  <AccordionTitle className="headtitleaccordion">
-                    <h4>What is Flowbite?</h4>
-                  </AccordionTitle>
-                  <AccordionContent className="bodyaccordioncontent">
-                    <h4>Question:</h4>
+          <div className="flex flex-wrap justify-center items-center gap-4 h-[100%] w-[50%]">
+            <Accordion className="items-center flex-col w-[100%]">
+              <AccordionPanel className="outerheaderaccordion">
+                <AccordionTitle className="headtitleaccordion focus:ring-[0px!important]">
+                  <h4>What is Flowbite?</h4>
+                </AccordionTitle>
+                <AccordionContent className="bodyaccordioncontent">
+                  <div className="p-8">
                     <p className="mb-2 text-gray-500 dark:text-gray-400">
                       Flowbite is an open-source library of interactive
                       components built on top of Tailwind CSS including buttons,
                       dropdowns, modals, navbars, and more.
                     </p>
-                    <p className="text-gray-500 dark:text-gray-400">
-                      Check out this guide to learn how to&nbsp;
-                      <a
-                        href="https://flowbite.com/docs/getting-started/introduction/"
-                        className="text-cyan-600 hover:underline dark:text-cyan-500"
-                      >
-                        get started&nbsp;
-                      </a>
-                      and start developing websites even faster with components
-                      on top of Tailwind CSS.
-                    </p>
-                  </AccordionContent>
-                </AccordionPanel>
-                <AccordionPanel className>
-                  <AccordionTitle className="headtitleaccordion">
-                    <h4>What is Flowbite?</h4>
-                  </AccordionTitle>
-                  <AccordionContent className="bodyaccordioncontent">
+                  </div>
+                </AccordionContent>
+              </AccordionPanel>
+              <AccordionPanel className="outerheaderaccordion">
+                <AccordionTitle className="headtitleaccordion focus:ring-[0px!important]">
+                  <h4>What is Flowbite?</h4>
+                </AccordionTitle>
+                <AccordionContent className="bodyaccordioncontent">
+                  <div className="p-8">
                     <p className="mb-2 text-gray-500 dark:text-gray-400">
                       Flowbite is an open-source library of interactive
                       components built on top of Tailwind CSS including buttons,
                       dropdowns, modals, navbars, and more.
                     </p>
-                    <p className="text-gray-500 dark:text-gray-400">
-                      Check out this guide to learn how to&nbsp;
-                      <a
-                        href="https://flowbite.com/docs/getting-started/introduction/"
-                        className="text-cyan-600 hover:underline dark:text-cyan-500"
-                      >
-                        get started&nbsp;
-                      </a>
-                      and start developing websites even faster with components
-                      on top of Tailwind CSS.
-                    </p>
-                  </AccordionContent>
-                </AccordionPanel>
-                <AccordionPanel className>
-                  <AccordionTitle className="headtitleaccordion">
-                    <h4>What is Flowbite?</h4>
-                  </AccordionTitle>
-                  <AccordionContent className="bodyaccordioncontent">
+                  </div>
+                </AccordionContent>
+              </AccordionPanel>
+              <AccordionPanel className="outerheaderaccordion">
+                <AccordionTitle className="headtitleaccordion focus:ring-[0px!important]">
+                  <h4>What is Flowbite?</h4>
+                </AccordionTitle>
+                <AccordionContent className="bodyaccordioncontent">
+                  <div className="p-8">
                     <p className="mb-2 text-gray-500 dark:text-gray-400">
                       Flowbite is an open-source library of interactive
                       components built on top of Tailwind CSS including buttons,
                       dropdowns, modals, navbars, and more.
                     </p>
-                    <p className="text-gray-500 dark:text-gray-400">
-                      Check out this guide to learn how to&nbsp;
-                      <a
-                        href="https://flowbite.com/docs/getting-started/introduction/"
-                        className="text-cyan-600 hover:underline dark:text-cyan-500"
-                      >
-                        get started&nbsp;
-                      </a>
-                      and start developing websites even faster with components
-                      on top of Tailwind CSS.
-                    </p>
-                  </AccordionContent>
-                </AccordionPanel>
-              </Accordion>
-            </div>
+                  </div>
+                </AccordionContent>
+              </AccordionPanel>
+            </Accordion>
           </div>
         </div>
       </section>
