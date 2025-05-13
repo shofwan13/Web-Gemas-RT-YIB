@@ -13,10 +13,10 @@ const MainFooter = () => {
       >
         <div className="w-[1440px] bg-pink-400">
           {/* Div pertama */}
-          <div className="w-full container mx-auto text-center">
-            <h3 className="text-[20px] md:text-[24px] font-bold">
+          <div className="w-[540px] container mx-auto text-center">
+            <h4 className="text-[20px] md:text-[24px] font-bold">
               Gerakan Mengelola Sampah Rumah Tangga
-            </h3>
+            </h4>
             <p>
               Gerakan kami memberikan solusi nyata untuk masyarakat dan
               lingkungan sekitar dengan menerapkan sistem pengelolaan sampah
@@ -25,10 +25,10 @@ const MainFooter = () => {
           </div>
 
           {/* Div kedua */}
-          <div className="w-full container mx-auto text-center">
-            <h3 className="text-[20px] md:text-[24px] font-bold mb-2">
+          <div className="w-[540px] container mx-auto text-center">
+            <h4 className="text-[20px] md:text-[24px] font-bold mb-2">
               Terhubung dengan kami
-            </h3>
+            </h4>
             <p className="text-sm md:text-base">
               Tetap terhubung dengan kami di media sosial untuk mendapatkan
               update dan informasi kegiatan terbaru.
