@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonSocial from "./buttonsocial";
+import ButtonSocialDesktop from "./ButtonSocialDesktop";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { height } from "@fortawesome/free-brands-svg-icons/fa42Group";
 
@@ -11,9 +11,9 @@ const MainFooter = () => {
         className="bg-[#F4F4F4] text-[#03330a] py-4 flex flex-col items-center"
         md:height="h-[100px]"
       >
-        <div className="w-[1440px] bg-pink-400">
+        <div className="flex-wrap w-auto lg:w-[1440px] bg-pink-400">
           {/* Div pertama */}
-          <div className="w-[540px] container mx-auto text-center">
+          <div className="w-auto lg:w-[540px] flex-wrap mx-auto text-center">
             <h4 className="text-[20px] md:text-[24px] font-bold">
               Gerakan Mengelola Sampah Rumah Tangga
             </h4>
@@ -25,7 +25,7 @@ const MainFooter = () => {
           </div>
 
           {/* Div kedua */}
-          <div className="w-[540px] container mx-auto text-center">
+          <div className="w-auto flex-wrap lg:w-[540px] container mx-auto text-center">
             <h4 className="text-[20px] md:text-[24px] font-bold mb-2">
               Terhubung dengan kami
             </h4>
@@ -33,8 +33,8 @@ const MainFooter = () => {
               Tetap terhubung dengan kami di media sosial untuk mendapatkan
               update dan informasi kegiatan terbaru.
             </p>
-            <div className="flex justify-center space-x-4 py-2">
-              <ButtonSocial
+            <div className="hidden flex-wrap w-full lg:w-auto lg:flex justify-center space-x-4 py-2">
+              <ButtonSocialDesktop
                 icon={"fa-brands fa-facebook"}
                 label="Facebook"
                 bgColor="bg-[#3b5998] hover:bg-[#2d4373]"
@@ -42,7 +42,7 @@ const MainFooter = () => {
                 url="https://www.facebook.com/"
                 isnewtab={true}
               />
-              <ButtonSocial
+              <ButtonSocialDesktop
                 icon={"fa-brands fa-x-twitter"}
                 label="X.com"
                 bgColor="bg-[#1c1c1c] hover:bg-[#080808]"
@@ -50,7 +50,7 @@ const MainFooter = () => {
                 url="https://twitter.com/"
                 isnewtab={true}
               />
-              <ButtonSocial
+              <ButtonSocialDesktop
                 icon={"fa-brands fa-instagram"}
                 label="Instagram"
                 bgColor="bg-[#C13584] hover:bg-[#bc2a8d]"

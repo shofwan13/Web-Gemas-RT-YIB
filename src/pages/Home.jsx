@@ -26,10 +26,10 @@ const Home = () => {
       <MainHeader />
       <section
         id="herosection"
-        className="bg-[#a9d222] h-[600px] flex items-center justify-center  flex-col "
+        className="bg-[#a9d222] w-auto h-[600px] flex items-center justify-center  flex-col "
       >
         <div className="flex lg:w-[1440px] bg-violet-400 lg:h-full ">
-          <div className="w-[600px] bg-green-500 content-center flex-col h-full space-y-[28px]">
+          <div className="w-auto lg:w-[600px] bg-green-500 content-center flex-col h-full space-y-[28px]">
             <div className="space-y-[8px]">
               <h1>Gemas RT</h1>
               <h4>Gerakan Mengelola Sampah Rumah Tangga</h4>
@@ -57,8 +57,8 @@ const Home = () => {
         id="pengelolaansampahberkelanjutan"
         className="bg-[#e15ee1] h-[100%] sm:px-10 flex gap-4 items-center justify-center flex-row my-10"
       >
-        <div className="w-[1440px] h bg-violet-600 flex flex-col justify-center content-center items-center gap-y-4">
-          <div className="flex bg-green-200 w-[540px] h-[100%] justify-center items-center flex-col space-y-[28px]">
+        <div className="flex-wrap lg:w-[1440px] h bg-violet-600  justify-center content-center items-center gap-y-4">
+          <div className="flex bg-green-200 flex-wrap w-auto lg:w-[540px] h-[100%] justify-center items-center flex-col space-y-[28px]">
             <div className="space-y-[8px] items-center text-center">
               <div className="flex justify-center items-center">
                 <img
@@ -228,8 +228,8 @@ const Home = () => {
         id="galerikegiatan"
         className="bg-[#e15ee1] h-[100%] sm:px-10 flex gap-4 items-center justify-center flex-row my-10"
       >
-        <div className="w-[1440px] h bg-violet-600 flex flex-col justify-center content-center items-center gap-y-4">
-          <div className="flex bg-green-200 w-[540px] h-[100%] justify-center items-center flex-col space-y-[28px]">
+        <div className="flex-wrap w-auto lg:w-[1440px] h bg-violet-600 flex flex-col justify-center content-center items-center gap-y-4">
+          <div className="flex bg-green-200 flex-wrap w-auto lg:w-[540px] h-[100%] justify-center items-center flex-col space-y-[28px]">
             <div className="space-y-[8px] items-center text-center">
               <div className="flex justify-center items-center">
                 <img
@@ -346,9 +346,9 @@ const Home = () => {
         id="faqpertanyaan"
         className="bg-[#e15ee1] h-[100%] sm:px-10 flex gap-4 items-center justify-center my-10"
       >
-        <div className="w-[1440px] h bg-violet-600 flex  flex-row justify-center content-center items-center gap-4">
-          <div className="bg-green-200 w-[50%] h-[100%] flex-col space-y-[28px]">
-            <div className="space-y-[8px] w-[540px] items-left text-left">
+        <div className="flex-wrap w-auto lg:w-[1440px] h bg-violet-600 flex  flex-row justify-center content-center items-center lg:gap-4">
+          <div className="bg-green-200 w-auto flex-wrap lg:w-[50%] h-[100%] flex-col space-y-[28px]">
+            <div className="space-y-[8px] w-auto lg:w-[540px] items-left text-left">
               <div className="">
                 <img
                   className=""
@@ -364,12 +364,12 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-4 h-[100%] w-[50%]">
+          <div className=" flex flex-wrap justify-center items-center lg:gap-4 h-[100%] w-auto lg:w-[50%]">
             <Accordion className="items-center flex-col w-[100%]">
               <AccordionPanel className="outerheaderaccordion">
                 <AccordionTitle
                   as="h4"
-                  className="headtitleaccordion focus:ring-0"
+                  className="headtitleaccordion w-full focus:ring-0"
                 >
                   What is Flowbite?
                 </AccordionTitle>
@@ -386,7 +386,7 @@ const Home = () => {
               <AccordionPanel className="outerheaderaccordion">
                 <AccordionTitle
                   as="h4"
-                  className="headtitleaccordion focus:ring-[0px!important]"
+                  className="headtitleaccordion w-full focus:ring-[0px!important]"
                 >
                   What is Flowbite?
                 </AccordionTitle>
@@ -403,7 +403,7 @@ const Home = () => {
               <AccordionPanel className="outerheaderaccordion">
                 <AccordionTitle
                   as="h4"
-                  className="headtitleaccordion focus:ring-[0px!important]"
+                  className="headtitleaccordion  w-full focus:ring-[0px!important]"
                 >
                   What is Flowbite?
                 </AccordionTitle>

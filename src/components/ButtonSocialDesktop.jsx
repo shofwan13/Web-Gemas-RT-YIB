@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const ButtonSocial = ({
+const ButtonSocialDesktop = ({
   label,
   bgColor = "bg-blue-600",
   textColor = "text-white",
@@ -46,4 +46,4 @@ const ButtonSocial = ({
   );
 };
 
-export default ButtonSocial;
+export default ButtonSocialDesktop;

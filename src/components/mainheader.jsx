@@ -19,7 +19,7 @@ const MainHeader = ({ title }) => {
 
 "
     >
-      <div className="flex justify-between items-center w-full lg:w-[1440px]  ">
+      <div className="flex px-[8px] justify-between items-center w-full lg:w-[1440px]  ">
         <div className="flex content-center items-center bg-transparent">
           <img
             src="./src/assets/img/gemas rt logo final-05.png"
@@ -127,7 +127,7 @@ const MainHeader = ({ title }) => {
         </div>
 
         <Link className="lg:hidden flex">
-          <FontAwesomeIcon icon={faBars} />
+          <FontAwesomeIcon size="xl" icon={faBars} />
         </Link>
       </div>
     </div>
