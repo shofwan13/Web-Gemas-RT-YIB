@@ -2,13 +2,25 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowAltCircleDown,
+  faBars,
+  faArrowDown,
+  faChevronDown,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
+import ExpandableButtonCard from "./ExpandableButtonCard";
+import NavbarItems from "../components/NavbarItems";
 
 const MainHeader = ({ title }) => {
   return (
-    <div className="flex items-center justify-center content-center bg-[#03330a] h-full py-[8px] px-[16px] sticky top-0 z-10">
-      {/* Logo and website title */}
-      <div className="flex items-center justify-between w-[1440px] bg-amber-900 ">
-        <div className="flex content-center items-center">
+    <div
+      className="flex items-center justify-center w-full bg-[#fcfcfc] py-[8px] sticky top-0 z-10 drop-shadow-lg
+
+"
+    >
+      <div className="flex justify-between items-center w-full lg:w-[1440px]  ">
+        <div className="flex content-center items-center bg-transparent">
           <img
             src="./src/assets/img/gemas rt logo final-05.png"
             alt="Logo"
@@ -17,41 +29,107 @@ const MainHeader = ({ title }) => {
           <h4 className="">Gemas RT</h4>
           <h1 className="text-white text-[16px] font-bold ml-2">{title}</h1>
         </div>
-        <div className="flex gap-x-12">
-          <Link
-            to="/"
-            className="text-white hover:text-gray-300 transition duration-300"
-          >
-            <div>Beranda</div>
+        <div className="hidden lg:flex 2xl:gap-x-0 lg:gap-x-12 xl:flex xl:gap-x-12">
+          <Link to="/" className="">
+            <NavbarItems
+              text="Home"
+              icon={faChevronRight}
+              bgColor="transparent"
+              textColor="text-[#1a6218]"
+              onClick={() => {
+                const element = document.getElementById("herosection");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            />
           </Link>
-          <Link
-            to="/"
-            className="text-white hover:text-gray-300 transition duration-300"
-          >
-            <div>Mengenai Kami</div>
+          <Link to="/" className="">
+            <NavbarItems
+              text="Latar Belakang"
+              icon={faChevronRight}
+              bgColor="transparent"
+              textColor="text-[#1a6218]"
+              onClick={() => {
+                const element = document.getElementById(
+                  "pengelolaansampahberkelanjutan"
+                );
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            />
           </Link>
-          <Link
-            to="/"
-            className="text-white hover:text-gray-300 transition duration-300"
-          >
-            <div>Teknik Pengelolaan</div>
+          <Link to="/" className="">
+            <NavbarItems
+              text="Kegiatan Utama"
+              icon={faChevronRight}
+              bgColor="transparent"
+              textColor="text-[#1a6218]"
+              onClick={() => {
+                const element = document.getElementById(
+                  "pengelolaansampahberkelanjutan"
+                );
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            />
           </Link>
-          <Link
-            to="/"
-            className="text-white hover:text-gray-300 transition duration-300"
-          >
-            <div>Galeri Kegiatan</div>
+          <Link to="/" className="">
+            <NavbarItems
+              text="Galeri Kegitan"
+              icon={faChevronRight}
+              bgColor="transparent"
+              textColor="text-[#1a6218]"
+              onClick={() => {
+                const element = document.getElementById(
+                  "pengelolaansampahberkelanjutan"
+                );
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            />
           </Link>
-          <Link
-            to="/"
-            className="text-white hover:text-gray-300 transition duration-300"
-          >
-            <div>Pertanyaan dan Jawaban</div>
+          <Link to="/" className="">
+            <NavbarItems
+              text="FAQ"
+              icon={faChevronRight}
+              bgColor="transparent"
+              textColor="text-[#1a6218]"
+              onClick={() => {
+                const element = document.getElementById(
+                  "pengelolaansampahberkelanjutan"
+                );
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            />
+          </Link>
+          <Link to="/" className="">
+            <NavbarItems
+              text="Kontak Kami"
+              icon={faChevronRight}
+              bgColor="transparent"
+              textColor="text-[#1a6218]"
+              onClick={() => {
+                const element = document.getElementById(
+                  "pengelolaansampahberkelanjutan"
+                );
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            />
           </Link>
         </div>
+
+        <Link className="lg:hidden flex">
+          <FontAwesomeIcon icon={faBars} />
+        </Link>
       </div>
-      {/* Navigation links */}
-      <nav className="ml-auto"></nav>
     </div>
   );
 };

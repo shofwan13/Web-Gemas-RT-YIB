@@ -16,6 +16,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
+import ExpandableButton from "../components/ExpandableButton";
+import ExpandableButtonCard from "../components/ExpandableButtonCard";
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("Pengadaan Sarana");
@@ -26,7 +28,7 @@ const Home = () => {
         id="herosection"
         className="bg-[#a9d222] h-[600px] flex items-center justify-center  flex-col "
       >
-        <div className="w-[1440px] bg-violet-400 h-full ">
+        <div className="flex lg:w-[1440px] bg-violet-400 lg:h-full ">
           <div className="w-[600px] bg-green-500 content-center flex-col h-full space-y-[28px]">
             <div className="space-y-[8px]">
               <h1>Gemas RT</h1>
@@ -37,9 +39,8 @@ const Home = () => {
               lingkungan sekitar dengan menerapkan sistem pengelolaan sampah
               yang lebih baik dan berkelanjutan.
             </p>
-            <Button
-              color={"green"}
-              className="flex gap-[10px] cursor-pointer"
+            <ExpandableButton
+              text="Selengkapnya"
               onClick={() => {
                 const element = document.getElementById(
                   "pengelolaansampahberkelanjutan"
@@ -48,9 +49,7 @@ const Home = () => {
                   element.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-            >
-              Selengkapnya <FontAwesomeIcon icon={"arrow-down"} />
-            </Button>
+            />
           </div>
         </div>
       </section>
@@ -89,10 +88,17 @@ const Home = () => {
                   Here are the biggest enterprise technology acquisitions of
                   2021 so far, in reverse chronological order.
                 </p>
-                <Button color="green" className="h-[44px] gap-2 cursor-pointer">
-                  Lebih lanjut
-                  <FontAwesomeIcon icon={faEye} />
-                </Button>
+                <ExpandableButtonCard
+                  text="Selengkapnya"
+                  onClick={() => {
+                    const element = document.getElementById(
+                      "pengelolaansampahberkelanjutan"
+                    );
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                />
               </Card>
               <Card className="bg-[#f0efef!important] h-[100%] w-[400px] border-0 ">
                 <img
@@ -106,10 +112,17 @@ const Home = () => {
                   Here are the biggest enterprise technology acquisitions of
                   2021 so far, in reverse chronological order.
                 </p>
-                <Button color="green" className="h-[44px] gap-2 cursor-pointer">
-                  Lebih lanjut
-                  <FontAwesomeIcon icon={faEye} />
-                </Button>
+                <ExpandableButtonCard
+                  text="Selengkapnya"
+                  onClick={() => {
+                    const element = document.getElementById(
+                      "pengelolaansampahberkelanjutan"
+                    );
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                />
               </Card>
               <Card className="bg-[#f0efef!important] h-[100%] w-[400px] border-0 ">
                 <img
@@ -123,10 +136,17 @@ const Home = () => {
                   Here are the biggest enterprise technology acquisitions of
                   2021 so far, in reverse chronological order.
                 </p>
-                <Button color="green" className="h-[44px] gap-2 cursor-pointer">
-                  Lebih lanjut
-                  <FontAwesomeIcon icon={faEye} />
-                </Button>
+                <ExpandableButtonCard
+                  text="Selengkapnya"
+                  onClick={() => {
+                    const element = document.getElementById(
+                      "pengelolaansampahberkelanjutan"
+                    );
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                />
               </Card>
               <Card className="bg-[#f0efef!important] h-[100%] w-[400px] border-0 ">
                 <img
@@ -140,10 +160,17 @@ const Home = () => {
                   Here are the biggest enterprise technology acquisitions of
                   2021 so far, in reverse chronological order.
                 </p>
-                <Button color="green" className="h-[44px] gap-2 cursor-pointer">
-                  Lebih lanjut
-                  <FontAwesomeIcon icon={faEye} />
-                </Button>
+                <ExpandableButtonCard
+                  text="Selengkapnya"
+                  onClick={() => {
+                    const element = document.getElementById(
+                      "pengelolaansampahberkelanjutan"
+                    );
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                />
               </Card>
               <Card className="bg-[#f0efef!important] h-[100%] w-[400px] border-0 ">
                 <img
@@ -157,10 +184,17 @@ const Home = () => {
                   Here are the biggest enterprise technology acquisitions of
                   2021 so far, in reverse chronological order.
                 </p>
-                <Button color="green" className="h-[44px] gap-2 cursor-pointer">
-                  Lebih lanjut
-                  <FontAwesomeIcon icon={faEye} />
-                </Button>
+                <ExpandableButtonCard
+                  text="Selengkapnya"
+                  onClick={() => {
+                    const element = document.getElementById(
+                      "pengelolaansampahberkelanjutan"
+                    );
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                />
               </Card>
               <Card className="bg-[#f0efef!important] h-[100%] w-[400px] border-0 ">
                 <img
@@ -174,10 +208,17 @@ const Home = () => {
                   Here are the biggest enterprise technology acquisitions of
                   2021 so far, in reverse chronological order.
                 </p>
-                <Button color="green" className="h-[44px] gap-2 cursor-pointer">
-                  Lebih lanjut
-                  <FontAwesomeIcon icon={faEye} />
-                </Button>
+                <ExpandableButtonCard
+                  text="Selengkapnya"
+                  onClick={() => {
+                    const element = document.getElementById(
+                      "pengelolaansampahberkelanjutan"
+                    );
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                />
               </Card>
             </div>
           </div>
@@ -213,58 +254,24 @@ const Home = () => {
                 className="btntabs items-center"
               >
                 <TabItem
-                  color="green"
-                  active={activeTab === "Pengadaan Sarana"}
-                  title="Pengadaan Sarana"
-                  onClick={() => setActiveTab("Pengadaan Sarana")}
+                  title="Sosialisasi dan Edukasi"
+                  active={activeTab === "Sosialisasi dan Edukasi"}
+                  onClick={() => setActiveTab("Sosialisasi dan Edukasi")}
                   className={`${
-                    activeTab === "Pengadaan Sarana"
+                    activeTab === "Sosialisasi dan Edukasi"
                       ? "bg-green-500 text-white"
                       : ""
                   }`}
                 >
                   <div className="flex flex-wrap gap-4 items-center justify-center">
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    {/* Add other images here */}
+                    {[...Array(8)].map((_, index) => (
+                      <img
+                        key={index}
+                        src="https://placehold.co/300x220"
+                        alt="Image 1"
+                        className={`object-cover border-0 rounded-[12px] motion-opacity-in-0  motion-blur-in-md motion-duration-[700ms]`}
+                      />
+                    ))}
                   </div>
                 </TabItem>
                 <TabItem
@@ -278,153 +285,56 @@ const Home = () => {
                   }`}
                 >
                   <div className="flex flex-wrap gap-4 items-center justify-center">
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    {/* Add other images here */}
+                    {[...Array(8)].map((_, index) => (
+                      <img
+                        key={index}
+                        src="https://placehold.co/300x220"
+                        alt="Image 1"
+                        className={`object-cover border-0 rounded-[12px] motion-opacity-in-0  motion-blur-in-md motion-duration-[700ms]`}
+                      />
+                    ))}
                   </div>
                 </TabItem>
                 <TabItem
-                  title="Event Kegiatan"
-                  active={activeTab === "Event Kegiatan"}
-                  onClick={() => setActiveTab("Event Kegiatan")}
+                  title="Sosialisasi dan Edukasi"
+                  active={activeTab === "Sosialisasi dan Edukasi"}
+                  onClick={() => setActiveTab("Sosialisasi dan Edukasi")}
                   className={`${
-                    activeTab === "Event Kegiatan"
+                    activeTab === "Sosialisasi dan Edukasi"
+                      ? "bg-[#06340b22] text-white"
+                      : ""
+                  }`}
+                >
+                  <div className="flex flex-wrap gap-4 items-center justify-center">
+                    {[...Array(8)].map((_, index) => (
+                      <img
+                        key={index}
+                        src="https://placehold.co/300x220"
+                        alt="Image 1"
+                        className={`object-cover border-0 rounded-[12px] motion-opacity-in-0  motion-blur-in-md motion-duration-[700ms]`}
+                      />
+                    ))}
+                  </div>
+                </TabItem>
+                <TabItem
+                  title="Sosialisasi dan Edukasi"
+                  active={activeTab === "Sosialisasi dan Edukasi"}
+                  onClick={() => setActiveTab("Sosialisasi dan Edukasi")}
+                  className={`${
+                    activeTab === "Sosialisasi dan Edukasi"
                       ? "bg-green-500 text-white"
                       : ""
                   }`}
                 >
                   <div className="flex flex-wrap gap-4 items-center justify-center">
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    {/* Add other images here */}
-                  </div>
-                </TabItem>
-                <TabItem
-                  title="Daur Ulang"
-                  active={activeTab === "Daur Ulang"}
-                  onClick={() => setActiveTab("Daur Ulang")}
-                  className={`${
-                    activeTab === "Daur Ulang" ? "bg-green-500 text-white" : ""
-                  }`}
-                >
-                  <div className="flex flex-wrap gap-4 items-center justify-center">
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    <img
-                      src="https://placehold.co/300x220"
-                      alt="Image 1"
-                      className="object-cover border-0 rounded-[12px]"
-                    />
-                    {/* Add other images here */}
+                    {[...Array(8)].map((_, index) => (
+                      <img
+                        key={index}
+                        src="https://placehold.co/300x220"
+                        alt="Image 1"
+                        className={`object-cover border-0 rounded-[12px] motion-opacity-in-0  motion-blur-in-md motion-duration-[700ms]`}
+                      />
+                    ))}
                   </div>
                 </TabItem>
               </Tabs>
@@ -457,8 +367,11 @@ const Home = () => {
           <div className="flex flex-wrap justify-center items-center gap-4 h-[100%] w-[50%]">
             <Accordion className="items-center flex-col w-[100%]">
               <AccordionPanel className="outerheaderaccordion">
-                <AccordionTitle className="headtitleaccordion focus:ring-[0px!important]">
-                  <h4>What is Flowbite?</h4>
+                <AccordionTitle
+                  as="h4"
+                  className="headtitleaccordion focus:ring-0"
+                >
+                  What is Flowbite?
                 </AccordionTitle>
                 <AccordionContent className="bodyaccordioncontent">
                   <div className="p-8">
@@ -471,8 +384,11 @@ const Home = () => {
                 </AccordionContent>
               </AccordionPanel>
               <AccordionPanel className="outerheaderaccordion">
-                <AccordionTitle className="headtitleaccordion focus:ring-[0px!important]">
-                  <h4>What is Flowbite?</h4>
+                <AccordionTitle
+                  as="h4"
+                  className="headtitleaccordion focus:ring-[0px!important]"
+                >
+                  What is Flowbite?
                 </AccordionTitle>
                 <AccordionContent className="bodyaccordioncontent">
                   <div className="p-8">
@@ -485,8 +401,11 @@ const Home = () => {
                 </AccordionContent>
               </AccordionPanel>
               <AccordionPanel className="outerheaderaccordion">
-                <AccordionTitle className="headtitleaccordion focus:ring-[0px!important]">
-                  <h4>What is Flowbite?</h4>
+                <AccordionTitle
+                  as="h4"
+                  className="headtitleaccordion focus:ring-[0px!important]"
+                >
+                  What is Flowbite?
                 </AccordionTitle>
                 <AccordionContent className="bodyaccordioncontent">
                   <div className="p-8">

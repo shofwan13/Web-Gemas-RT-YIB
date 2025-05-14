@@ -1,8 +1,13 @@
 @import "tailwindcss";
+@plugin "tailwindcss-motion";
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
 
-\.outerheaderaccordion {
+* {
+  @apply ring-offset-0 ring-0;
+}
+
+.outerheaderaccordion {
   border: 0px !important;
   border: 0px !important;
   border-style: hidden !important;
