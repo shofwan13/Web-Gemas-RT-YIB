@@ -11,7 +11,7 @@ const MainFooter = () => {
         className="bg-[#F4F4F4] text-[#03330a] py-4 flex flex-col items-center"
         md:height="h-[100px]"
       >
-        <div className="flex-wrap w-auto lg:w-[1440px] bg-pink-400">
+        <div className="flex-wrap w-auto lg:w-[1440px] px-6 bg-transparent">
           {/* Div pertama */}
           <div className="w-auto lg:w-[540px] flex-wrap mx-auto text-center">
             <h4 className="text-[20px] md:text-[24px] font-bold">

@@ -8,6 +8,7 @@ import {
   faArrowDown,
   faChevronDown,
   faChevronRight,
+  faLeaf,
 } from "@fortawesome/free-solid-svg-icons";
 import ExpandableButtonCard from "./ExpandableButtonCard";
 import NavbarItems from "../components/NavbarItems";
@@ -33,7 +34,7 @@ const MainHeader = ({ title }) => {
           <Link to="/" className="">
             <NavbarItems
               text="Home"
-              icon={faChevronRight}
+              icon={faLeaf}
               bgColor="transparent"
               textColor="text-[#1a6218]"
               onClick={() => {
@@ -47,7 +48,7 @@ const MainHeader = ({ title }) => {
           <Link to="/" className="">
             <NavbarItems
               text="Latar Belakang"
-              icon={faChevronRight}
+              icon={faLeaf}
               bgColor="transparent"
               textColor="text-[#1a6218]"
               onClick={() => {
@@ -63,7 +64,7 @@ const MainHeader = ({ title }) => {
           <Link to="/" className="">
             <NavbarItems
               text="Kegiatan Utama"
-              icon={faChevronRight}
+              icon={faLeaf}
               bgColor="transparent"
               textColor="text-[#1a6218]"
               onClick={() => {
@@ -79,7 +80,7 @@ const MainHeader = ({ title }) => {
           <Link to="/" className="">
             <NavbarItems
               text="Galeri Kegitan"
-              icon={faChevronRight}
+              icon={faLeaf}
               bgColor="transparent"
               textColor="text-[#1a6218]"
               onClick={() => {
@@ -95,7 +96,7 @@ const MainHeader = ({ title }) => {
           <Link to="/" className="">
             <NavbarItems
               text="FAQ"
-              icon={faChevronRight}
+              icon={faLeaf}
               bgColor="transparent"
               textColor="text-[#1a6218]"
               onClick={() => {
@@ -111,7 +112,7 @@ const MainHeader = ({ title }) => {
           <Link to="/" className="">
             <NavbarItems
               text="Kontak Kami"
-              icon={faChevronRight}
+              icon={faLeaf}
               bgColor="transparent"
               textColor="text-[#1a6218]"
               onClick={() => {
