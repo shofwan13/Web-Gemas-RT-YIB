@@ -16,28 +16,16 @@ const ButtonSocialDesktop = ({
     <Link to={url} target={isnewtab ? "_blank" : ""}>
       <button
         type="button"
-        className={`flex items-center h-[44px] rounded-lg transition-all duration-500 px-4 pr-4 overflow-hidden ${bgColor} ${textColor}`}
+        className={`flex items-center h-11 rounded-lg px-4 overflow-hidden transition-all duration-500 ${bgColor} ${textColor}`}
         onMouseEnter={() => setShowLabel(true)}
         onMouseLeave={() => setShowLabel(false)}
-        onFocus={() => setShowLabel(true)}
-        onBlur={() => setShowLabel(false)}
-        style={{
-          width: showLabel ? "160px" : "44px", // Lebar tombol berubah sesuai state
-          transition: "width 500ms ease-in-out", // Transisi halus untuk width
-        }}
+        style={{ width: showLabel ? "160px" : "44px" }}
       >
-        <span className="flex items-center">
-          {icon && <FontAwesomeIcon icon={icon} className="text-lg" />}
-        </span>
+        {icon && <FontAwesomeIcon icon={icon} className="text-lg" />}
         <span
-          className={`whitespace-nowrap ml-2 overflow-hidden inline-block transition-all duration-500 ${
-            showLabel ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
+          className={`ml-2 whitespace-nowrap transition-all duration-500 ${
+            showLabel ? "opacity-100" : "opacity-0"
           }`}
-          style={{
-            transitionProperty: "opacity, transform",
-            opacity: showLabel ? 1 : 0, // Segera hilangkan opacity
-            width: showLabel ? "auto" : "0", // Segera hilangkan width
-          }}
         >
           {label}
         </span>

@@ -20,7 +20,7 @@ const MainHeader = ({ title }) => {
 
 "
     >
-      <div className="flex px-[8px] lg:px-0 justify-between items-center w-full lg:w-[1440px]  ">
+      <div className="flex px-[8px] justify-between items-center w-full lg:w-[1440px]  ">
         <div className="flex content-center items-center bg-transparent">
           <img
             src="./src/assets/img/gemas rt logo final-05.png"
@@ -30,7 +30,7 @@ const MainHeader = ({ title }) => {
           <h4 className="">Gemas RT</h4>
           <h1 className="text-white text-[16px] font-bold ml-2">{title}</h1>
         </div>
-        <div className="hidden lg:flex 2xl:gap-x-0\[0,1vw] lg:gap-x-[0,1vw] xl:flex xl:gap-x-[0,1vw]">
+        <div className="hidden lg:flex 2xl:gap-x-0 lg:gap-x-12 xl:flex xl:gap-x-12">
           <Link to="/" className="">
             <NavbarItems
               text="Home"

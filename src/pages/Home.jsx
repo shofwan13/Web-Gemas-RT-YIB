@@ -15,21 +15,20 @@ import {
 } from "flowbite-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import ExpandableButton from "../components/ExpandableButton";
 import ExpandableButtonCard from "../components/ExpandableButtonCard";
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 
 const Home = () => {
-  const [activeTab, setActiveTab] = useState("Pengadaan Sarana");
   return (
     <div>
       <MainHeader />
       <section
         id="herosection"
-        className="bg-[#a9d222] w-auto h-[440px] lg:h-[600px] flex items-center justify-center  flex-col "
+        className="bg-[#e15ee1] h-[100%] sm:px-[8px] flex gap-4 items-center justify-center flex-row"
       >
         <div className="flex lg:w-[1440px] px-2 lg:px-auto bg-violet-400 lg:h-full ">
-          <div className="w-auto lg:w-[600px] bg-green-500 content-center flex-col h-full space-y-[28px]">
+          <div className="w-auto lg:w-[600px] bg-green-500 content-center flex-col h-[600px] space-y-[28px]">
             <div className="space-y-[8px]">
               <h1>Gemas RT</h1>
               <h4>Gerakan Mengelola Sampah Rumah Tangga</h4>
@@ -55,9 +54,9 @@ const Home = () => {
       </section>
       <section
         id="pengelolaansampahberkelanjutan"
-        className="bg-[#e15ee1] h-[100%] sm:px-10 flex gap-4 items-center justify-center flex-row my-10"
+        className="bg-[#f8f8f8] h-[100%] py-[64px] sm:px-[8px] flex gap-4 items-center justify-center flex-row"
       >
-        <div className="flex-wrap lg:flex lg:w-[1440px] px-2 bg-violet-600  justify-center content-center items-center gap-y-4">
+        <div className="flex-wrap lg:flex lg:w-[1440px] px-2 justify-center content-center items-center gap-y-4">
           <div className="flex item bg-green-200 flex-wrap w-auto lg:w-[540px] h-[100%] justify-center items-center flex-col space-y-[28px]">
             <div className="space-y-[8px] items-center text-center">
               <div className="flex justify-center items-center">
@@ -75,7 +74,7 @@ const Home = () => {
             </div>
           </div>
           <div className="bg-green-200 w-full flex flex-col space-y-[28px] items-center justify-center h-[100%]">
-            <div className="flex flex-wrap bg-amber-200 justify-center items-center gap-4 h-[100%]">
+            <div className="flex flex-wrap w-full bg-amber-200 justify-center items-center gap-4 h-[100%]">
               <Card className="bg-[#f0efef!important] h-[100%] w-[400px] border-0 ">
                 <img
                   className="w-[100px] h-[100px]"
@@ -226,10 +225,10 @@ const Home = () => {
       </section>
       <section
         id="galerikegiatan"
-        className="bg-[#e15ee1] h-[100%] sm:px-10 flex gap-4 items-center justify-center flex-row my-10"
+        className="bg-[#f8f8f8] py-[64px] h-[100%] sm:px-[8px] flex gap-4 items-center justify-center flex-row  "
       >
-        <div className="flex-wrap w-auto lg:w-[1440px] px-2 bg-violet-600 flex flex-col justify-center content-center items-center gap-y-4">
-          <div className="flex bg-green-200 flex-wrap w-auto lg:w-[540px] h-[100%] justify-center items-center flex-col space-y-[28px]">
+        <div className="flex-wrap lg:flex lg:w-[1440px] px-2  justify-center content-center items-center gap-y-4">
+          <div className="flex bg-green-200 flex-wrap w-full lg:w-[540px] h-[100%] justify-center items-center flex-col space-y-[28px]">
             <div className="space-y-[8px] items-center text-center">
               <div className="flex justify-center items-center">
                 <img
@@ -247,108 +246,98 @@ const Home = () => {
             </div>
           </div>
           <div className="bg-green-200 w-full space-y-[28px] items-center justify-center h-[100%]">
-            <div className="flex flex-wrap bg-amber-200 justify-center items-center gap-4 h-[100%]">
-              <Tabs
-                aria-label="Default tabs"
-                variant="pills"
-                className="btntabs justify-center  items-center"
-              >
-                <TabItem
-                  title="Sosialisasi dan Edukasi"
-                  active={activeTab === "Sosialisasi dan Edukasi"}
-                  onClick={() => setActiveTab("Sosialisasi dan Edukasi")}
-                  className={`${
-                    activeTab === "Sosialisasi dan Edukasi"
-                      ? "bg-green-500 text-white"
-                      : ""
-                  }`}
-                >
-                  <div className="flex flex-wrap gap-4 items-center justify-center">
-                    {[...Array(8)].map((_, index) => (
-                      <img
-                        key={index}
-                        src="https://placehold.co/300x220"
-                        alt="Image 1"
-                        className={`object-cover border-0 rounded-[12px] motion-opacity-in-0  motion-blur-in-md motion-duration-[700ms]`}
-                      />
-                    ))}
-                  </div>
-                </TabItem>
-                <TabItem
-                  title="Sosialisasi dan Edukasi"
-                  active={activeTab === "Sosialisasi dan Edukasi"}
-                  onClick={() => setActiveTab("Sosialisasi dan Edukasi")}
-                  className={`${
-                    activeTab === "Sosialisasi dan Edukasi"
-                      ? "bg-green-500 text-white"
-                      : ""
-                  }`}
-                >
-                  <div className="flex flex-wrap gap-4 items-center justify-center">
-                    {[...Array(8)].map((_, index) => (
-                      <img
-                        key={index}
-                        src="https://placehold.co/300x220"
-                        alt="Image 1"
-                        className={`object-cover border-0 rounded-[12px] motion-opacity-in-0  motion-blur-in-md motion-duration-[700ms]`}
-                      />
-                    ))}
-                  </div>
-                </TabItem>
-                <TabItem
-                  title="Sosialisasi dan Edukasi"
-                  active={activeTab === "Sosialisasi dan Edukasi"}
-                  onClick={() => setActiveTab("Sosialisasi dan Edukasi")}
-                  className={`${
-                    activeTab === "Sosialisasi dan Edukasi"
-                      ? "bg-[#06340b22] text-white"
-                      : ""
-                  }`}
-                >
-                  <div className="flex flex-wrap gap-4 items-center justify-center">
-                    {[...Array(8)].map((_, index) => (
-                      <img
-                        key={index}
-                        src="https://placehold.co/300x220"
-                        alt="Image 1"
-                        className={`object-cover border-0 rounded-[12px] motion-opacity-in-0  motion-blur-in-md motion-duration-[700ms]`}
-                      />
-                    ))}
-                  </div>
-                </TabItem>
-                <TabItem
-                  title="Sosialisasi dan Edukasi"
-                  active={activeTab === "Sosialisasi dan Edukasi"}
-                  onClick={() => setActiveTab("Sosialisasi dan Edukasi")}
-                  className={`${
-                    activeTab === "Sosialisasi dan Edukasi"
-                      ? "bg-green-500 text-white"
-                      : ""
-                  }`}
-                >
-                  <div className="flex flex-wrap gap-4 items-center justify-center">
-                    {[...Array(8)].map((_, index) => (
-                      <img
-                        key={index}
-                        src="https://placehold.co/300x220"
-                        alt="Image 1"
-                        className={`object-cover border-0 rounded-[12px] motion-opacity-in-0  motion-blur-in-md motion-duration-[700ms]`}
-                      />
-                    ))}
-                  </div>
-                </TabItem>
-              </Tabs>
+            <div className="flex flex-wrap w-full bg-amber-200 justify-center items-center gap-4 h-[100%]">
+              <TabGroup className="w-full ">
+                <TabList className="gap-4 flex flex-row justify-center items-center">
+                  <Tab className="p-3 w-36 rounded-lg ring-0 outline-0 bg-[#1a6218] hover:bg-[#294728] active:bg-black focus:bg-black text-white">
+                    Tab 1
+                  </Tab>
+                  <Tab className="p-3 w-36 rounded-lg ring-0 outline-0 bg-[#1a6218] hover:bg-[#294728]  active:bg-black focus:bg-black text-white">
+                    Tab 2
+                  </Tab>
+                  <Tab className="p-3 w-36 rounded-lg ring-0 outline-0 bg-[#1a6218] hover:bg-[#294728] active:bg-black  focus:bg-black text-white">
+                    Tab 3
+                  </Tab>
+                </TabList>
+                <TabPanels>
+                  <TabPanel className="flex w-full cumancontoh flex-col md:flex-row lg:flex-row items-center md:flex-wrap py-8 gap-4 justify-center bg-amber-500">
+                    <img
+                      className="rounded-lg w-max h-max sm:w-[304px] sm:h-[224px] lg:w-max lg:h-max motion-opacity-in-100 delay-0 motion-duration-800"
+                      src="https://placehold.co/380x280"
+                      alt="Placeholder"
+                    ></img>
+                    <img
+                      className="rounded-lg w-max h-max sm:w-[304px] sm:h-[224px] lg:w-max lg:h-max motion-opacity-in-0   delay-200 motion-duration-800"
+                      src="https://placehold.co/380x280"
+                      alt="Placeholder"
+                    ></img>
+                    <img
+                      className="rounded-lg w-max h-max sm:w-[304px] sm:h-[224px] lg:w-max lg:h-max motion-opacity-in-0  delay-400 motion-duration-800"
+                      src="https://placehold.co/380x280"
+                      alt="Placeholder"
+                    ></img>
+                    <img
+                      className="rounded-lg w-max h-max sm:w-[304px] sm:h-[224px] lg:w-max lg:h-max motion-opacity-in-0  delay-600 motion-duration-800"
+                      src="https://placehold.co/380x280"
+                      alt="Placeholder"
+                    ></img>
+                    <img
+                      className="rounded-lg w-max h-max sm:w-[304px] sm:h-[224px] lg:w-max lg:h-max motion-opacity-in-0  delay-800 motion-duration-800"
+                      src="https://placehold.co/380x280"
+                      alt="Placeholder"
+                    ></img>
+                    <img
+                      className="rounded-lg w-max h-max sm:w-[304px] sm:h-[224px] lg:w-max lg:h-max motion-opacity-in-0  delay-1000 motion-duration-800"
+                      src="https://placehold.co/380x280"
+                      alt="Placeholder"
+                    ></img>
+                  </TabPanel>
+                  <TabPanel className="flex w-full cumancontoh flex-col md:flex-row lg:flex-row items-center md:flex-wrap py-8 gap-4 justify-center bg-amber-500">
+                    <img
+                      className="rounded-lg w-max h-max sm:w-[304px] sm:h-[224px] lg:w-max lg:h-max motion-opacity-in-100 delay-0 motion-duration-800"
+                      src="https://placehold.co/380x280"
+                      alt="Placeholder"
+                    ></img>
+                    <img
+                      className="rounded-lg w-max h-max sm:w-[304px] sm:h-[224px] lg:w-max lg:h-max motion-opacity-in-0   delay-200 motion-duration-800"
+                      src="https://placehold.co/380x280"
+                      alt="Placeholder"
+                    ></img>
+                    <img
+                      className="rounded-lg w-max h-max sm:w-[304px] sm:h-[224px] lg:w-max lg:h-max motion-opacity-in-0  delay-400 motion-duration-800"
+                      src="https://placehold.co/380x280"
+                      alt="Placeholder"
+                    ></img>
+                    <img
+                      className="rounded-lg w-max h-max sm:w-[304px] sm:h-[224px] lg:w-max lg:h-max motion-opacity-in-0  delay-600 motion-duration-800"
+                      src="https://placehold.co/380x280"
+                      alt="Placeholder"
+                    ></img>
+                    <img
+                      className="rounded-lg w-max h-max sm:w-[304px] sm:h-[224px] lg:w-max lg:h-max motion-opacity-in-0  delay-800 motion-duration-800"
+                      src="https://placehold.co/380x280"
+                      alt="Placeholder"
+                    ></img>
+                    <img
+                      className="rounded-lg w-max h-max sm:w-[304px] sm:h-[224px] lg:w-max lg:h-max motion-opacity-in-0  delay-1000 motion-duration-800"
+                      src="https://placehold.co/380x280"
+                      alt="Placeholder"
+                    ></img>
+                  </TabPanel>
+                  <TabPanel>Content 3</TabPanel>
+                </TabPanels>
+              </TabGroup>
             </div>
           </div>
         </div>
       </section>
       <section
         id="faqpertanyaan"
-        className="bg-[#e15ee1] h-[100%] sm:px-10 flex gap-4 items-center justify-center my-10"
+        className="bg-[#ececec] py-[64px] h-[100%] sm:px-[8px] flex gap-4 items-center justify-center  "
       >
-        <div className="flex-wrap w-auto lg:w-[1440px] px-2 bg-violet-600 flex  flex-row justify-center content-center items-center lg:gap-4">
-          <div className="bg-green-200 w-full lg:flex-1/2 h-[100%] flex-col space-y-[28px]">
-            <div className="space-y-[8px] w-auto lg:w-[540px] items-left text-left">
+        <div className="flex-wrap w-auto lg:w-[1440px] px-2  flex  flex-row justify-center content-center items-center lg:gap-4">
+          <div className="bg-green-200 w-full space-y-[28px] items-center justify-center h-[100%]">
+            <div className="space-y-[8px] content-center items-center justify-center   w-auto lg:w-[540px] items-left text-left">
               <div className="">
                 <img
                   className=""

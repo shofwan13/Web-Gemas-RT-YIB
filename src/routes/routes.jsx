@@ -1,8 +1,10 @@
 import React from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import Home from "../pages/home";
-import About from "../pages/about";
+import About from "../pages/About";
 import Blogs from "../pages/Blogs";
+import Home from "../pages/Home";
+import Dashboard from "../pages/Dashboard";
+import Login from "../pages/Login";
 
 //Routes untuk public tanpa login
 const Routes = () => {
@@ -10,6 +12,9 @@ const Routes = () => {
     { path: "/", element: <Home /> },
     { path: "/about", element: <About /> },
     { path: "/blogs", element: <Blogs /> },
+    { path: "/admin/dashboad", element: <Dashboard /> },
+    { path: "/admin/login", element: <Login /> },
+    { path: "/admin/*", element: <Login /> },
   ];
 
   const router = createBrowserRouter([

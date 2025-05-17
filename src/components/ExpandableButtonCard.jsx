@@ -6,7 +6,7 @@ import React from "react";
 export default function ExpandableButtonCard({
   text = "Menuju Fitur",
   icon = faArrowRight,
-  bgColor = "bg-green-600",
+  bgColor = "bg-[#1a6218]",
   textColor = "text-white",
   onClick,
 }) {

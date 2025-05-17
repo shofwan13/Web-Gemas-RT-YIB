@@ -3,7 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
-export default function ExpandableButton({ text = "Menuju Fitur", onClick }) {
+export default function ExpandableButton({
+  text = "Menuju Fitur",
+  icon = faArrowRight,
+  bgColor = "bg-[#1a6218]",
+  textColor = "text-white",
+  onClick,
+}) {
   const [showIcon, setShowIcon] = useState(false);
 
   return (
@@ -14,7 +20,7 @@ export default function ExpandableButton({ text = "Menuju Fitur", onClick }) {
       onMouseLeave={() => setShowIcon(false)}
       onFocus={() => setShowIcon(true)}
       onBlur={() => setShowIcon(false)}
-      className="flex items-center transition-all duration-300 bg-green-600 text-white px-4 h-[44px] rounded-lg overflow-hidden"
+      className={`flex items-center transition-all duration-300 ${bgColor} ${textColor} px-4 h-[44px] rounded-lg overflow-hidden`}
     >
       <span className="whitespace-nowrap">{text}</span>
       <span
@@ -23,7 +29,7 @@ export default function ExpandableButton({ text = "Menuju Fitur", onClick }) {
         }`}
         style={{ transitionProperty: "width, opacity" }}
       >
-        <FontAwesomeIcon icon={faArrowRight} className="text-lg" />
+        <FontAwesomeIcon icon={icon} className="text-lg" />
       </span>
     </button>
   );
