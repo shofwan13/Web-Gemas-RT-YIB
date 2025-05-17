@@ -12,7 +12,7 @@ const Routes = () => {
     { path: "/", element: <Home /> },
     { path: "/about", element: <About /> },
     { path: "/blogs", element: <Blogs /> },
-    { path: "/admin/dashboad", element: <Dashboard /> },
+    { path: "/admin/dashboard", element: <Dashboard /> },
     { path: "/admin/login", element: <Login /> },
     { path: "/admin/*", element: <Login /> },
   ];

@@ -78,7 +78,7 @@ const Home = () => {
               <Card className="bg-[#f0efef!important] h-[100%] w-[400px] border-0 ">
                 <img
                   className="w-[100px] h-[100px]"
-                  src="https://placehold.co/100x100"
+                  src=".src/assets/img/gemas rt logo final-05.png"
                 ></img>
                 <h5 className="text-2xl  font-bold tracking-tight">
                   Pemisahan sampah berdasarkan jenisnya
