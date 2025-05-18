@@ -12,8 +12,16 @@ const Dashboard = () => {
           <div className="bg-[#dddddd] p-[28px] items-center justify-center flex flex-col w-full h-[40px] border-b-[#9c9c9cee] border-b-[1px]">
             <p>Navbar</p>
           </div>
-          <div className="flex bg-white p-[20px] h-full w-full">
-            ini Halaman Dashboard
+          <div className="flex flex-col gap-4 bg-white p-[20px] h-full w-full overflow-y-scroll">
+            <div className="flex flex-row gap-4 bg-amber-300 rounded-[12px] overflow-hidden p-[12px] outline-[1px] outline-[#9c9c9cee]">
+              <img className="" src="https://placehold.co/380x280" />
+            </div>
+            <div className="flex flex-row gap-4 bg-amber-300 rounded-[12px] overflow-hidden p-[12px] outline-[1px] outline-[#9c9c9cee]">
+              <img className="" src="https://placehold.co/380x280" />
+            </div>
+            <div className="flex flex-row gap-4 bg-amber-300 rounded-[12px] overflow-hidden p-[12px] outline-[1px] outline-[#9c9c9cee]">
+              <img className="" src="https://placehold.co/380x280" />
+            </div>
           </div>
         </div>
       </div>
