@@ -1,6 +1,6 @@
 import React from "react";
-import MainHeader from "../components/mainheader";
-import MainFooter from "../components/mainfooter";
+import MainHeader from "../../components/mainheader";
+import MainFooter from "../../components/mainfooter";
 
 const Blogs = () => {
   return (
