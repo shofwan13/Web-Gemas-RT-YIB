@@ -70,7 +70,7 @@ const Home = () => {
             <div className="space-y-[8px] items-center text-center">
               <div className="flex justify-center items-center">
                 <img
-                  className=""
+                  className="bg-[#f8f8f8] outline-[#cbcbcb] outline-1 rounded-lg"
                   src="https://placehold.co/100x100"
                   alt="Placeholder"
                 />
@@ -82,12 +82,12 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className=" w-full bg-amber-300 flex flex-col space-y-[28px] items-center justify-center h-[100%]">
+          <div className=" w-full flex flex-col space-y-[28px] items-center justify-center h-[100%]">
             <div className="flex flex-wrap w-full justify-center items-center gap-4 h-[100%]">
               {Array.from({ length: 6 }).map((_, idx) => (
                 <Card
                   key={idx}
-                  className="bg-[#f0efef!important] h-[100%] w-[32.5%] border-0 "
+                  className="bg-[#f0efef!important] h-[100%] w-[100%] lg:w-[32.5%] border-1 border-[#cbcbcb] "
                 >
                   <img
                     className="w-[100px] h-[100px]"
@@ -126,7 +126,7 @@ const Home = () => {
             <div className="space-y-[8px] items-center text-center">
               <div className="flex justify-center items-center">
                 <img
-                  className=""
+                  className="bg-[#f8f8f8] outline-[#cbcbcb] outline-1 rounded-lg"
                   src="https://placehold.co/100x100"
                   alt="Placeholder"
                 />
@@ -261,10 +261,10 @@ const Home = () => {
         className="bg-[#075A13] py-[64px] h-[100%] sm:px-[8px] flex flex-row items-center justify-center  "
       >
         <div className="flex-row lg:flex lg:w-[1440px] px-2 gap-4">
-          <div className="flex bg-amber-500 flex-wrap w-full lg:w-[50%] h-[100%] justify-center items-center flex-col space-y-[28px]">
+          <div className="flex bg-amber-500 flex-wrap w-full lg:w-[50%] h-[100%] justify-center items-start flex-col space-y-[28px]">
             <div className="space-y-[8px] ">
               <img
-                className=""
+                className="bg-[#f8f8f8] outline-[#cbcbcb] outline-1 rounded-lg"
                 src="https://placehold.co/100x100"
                 alt="Placeholder"
               />
@@ -277,10 +277,10 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="flex bg-amber-500 flex-wrap w-full lg:w-[50%] h-[100%] flex-col space-y-[28px]">
+          <div className="flex bg-amber-500 flex-wrap w-full lg:w-[50%]  items-start h-[100%] flex-col space-y-[28px]">
             <div className="space-y-[8px] ">
               <img
-                className=""
+                className="bg-[#f8f8f8] outline-[#cbcbcb] outline-1 rounded-lg"
                 src="https://placehold.co/100x100"
                 alt="Placeholder"
               />

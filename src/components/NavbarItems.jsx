@@ -10,6 +10,7 @@ export default function NavbarItems({
   textColor = "text-white",
   onClick,
   active = false,
+  horizontalPadding = "px-4",
 }) {
   const [showIcon, setShowIcon] = useState(false);
 
@@ -21,7 +22,7 @@ export default function NavbarItems({
       onMouseLeave={() => setShowIcon(false)}
       onFocus={() => setShowIcon(true)}
       onBlur={() => setShowIcon(false)}
-      className={`flex items-center justify-center gap-2 transition-all duration-300 px-4 h-[44px] font-bold rounded-lg overflow-hidden ${bgColor} ${textColor}`}
+      className={`flex items-center justify-center gap-2 transition-all duration-300 ${horizontalPadding} h-[44px] font-bold rounded-lg overflow-hidden ${bgColor} ${textColor}`}
     >
       <span
         className={`justify-self-center whitespace-nowrap ${
