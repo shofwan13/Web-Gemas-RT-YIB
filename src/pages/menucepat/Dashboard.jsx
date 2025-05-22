@@ -1,6 +1,6 @@
 import React from "react";
 import SidebarAdmin from "../../components/sidebarAdmin";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Checkbox } from "@headlessui/react";
 import DashboardNavbar from "../../components/DashboardNavbar";
 import {
@@ -12,8 +12,21 @@ import {
   Select,
   Textarea,
 } from "@headlessui/react";
+import Editor from "../../components/Editor";
+import Quill from "quill";
+
+const Delta = Quill.import("delta");
 
 const Dashboard = () => {
+  //Quill
+  const [range, setRange] = useState();
+  const [lastChange, setLastChange] = useState();
+  const [readOnly, setReadOnly] = useState(false);
+
+  // Use a ref to access the quill instance directly
+  const quillRef = useRef();
+
+  //Label Catatan
   const checkboxList = [
     { id: 1, label: "Catatan 1" },
     { id: 2, label: "Catatan 2" },
@@ -37,7 +50,7 @@ const Dashboard = () => {
             <div className="flex flex-row gap-4 h-full bg-amber-300 rounded-[12px] overflow-hidden p-[12px] outline-[1px] outline-[#9c9c9cee]">
               <div
                 id="draftcepat"
-                className="flex h-full flex-col bg-[#ebebeb] p-[20px] gap-[12px] w-[600px] rounded-[12px]  "
+                className="flex h-auto flex-col bg-[#ebebeb] p-[20px] gap-[12px] w-[600px] rounded-[12px]  "
               >
                 <h4 className="self-start">Draft Cepat</h4>
                 <Fieldset className="space-y-8">
@@ -60,8 +73,13 @@ const Dashboard = () => {
                     </Select>
                   </Field>
                   <Field>
-                    <Label className="block">Delivery notes</Label>
-                    <Textarea className="mt-1 block" name="notes" />
+                    <Label className="block font">Konten Postingan</Label>
+                    <Textarea
+                      className="mt-1 block outline-1 w-full h-auto rounded-[8px] p-[8px] resize-none bg-white overflow-y-scroll"
+                      name="kontenpostingandraft"
+                      rows={9}
+                      placeholder="Tulis Konten Postingan"
+                    />
                   </Field>
                 </Fieldset>
               </div>
@@ -106,9 +124,6 @@ const Dashboard = () => {
                   ))}
                 </ul>
               </div>
-            </div>
-            <div className="flex flex-row gap-4 bg-amber-300 rounded-[12px] overflow-hidden p-[12px] outline-[1px] outline-[#9c9c9cee]">
-              <img className="" src="https://placehold.co/380x280" />
             </div>
             <div className="flex flex-row gap-4 bg-amber-300 rounded-[12px] overflow-hidden p-[12px] outline-[1px] outline-[#9c9c9cee]">
               <img className="" src="https://placehold.co/380x280" />
