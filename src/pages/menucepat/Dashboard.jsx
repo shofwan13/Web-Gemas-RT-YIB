@@ -12,19 +12,26 @@ import {
   Select,
   Textarea,
 } from "@headlessui/react";
-import Editor from "../../components/Editor";
-import Quill from "quill";
-
-const Delta = Quill.import("delta");
+import { Editor } from "@tinymce/tinymce-react";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeadCell,
+  TableRow,
+} from "flowbite-react";
 
 const Dashboard = () => {
-  //Quill
-  const [range, setRange] = useState();
-  const [lastChange, setLastChange] = useState();
-  const [readOnly, setReadOnly] = useState(false);
+  const apiKeyTinymce = import.meta.env.VITE_TINYMCE_API_KEY;
 
-  // Use a ref to access the quill instance directly
-  const quillRef = useRef();
+  //Editor
+  const editorRef = useRef(null);
+  const log = () => {
+    if (editorRef.current) {
+      console.log(editorRef.current.getContent());
+    }
+  };
 
   //Label Catatan
   const checkboxList = [
@@ -46,46 +53,95 @@ const Dashboard = () => {
         <SidebarAdmin />
         <div className="flex flex-col bg-amber-500 w-[80vw] h-auto">
           <DashboardNavbar />
-          <div className="flex flex-col gap-4 bg-white p-[20px] h-full w-full overflow-y-scroll">
-            <div className="flex flex-row gap-4 h-full bg-amber-300 rounded-[12px] overflow-hidden p-[12px] outline-[1px] outline-[#9c9c9cee]">
+          <div className="flex flex-col gap-4 bg-white p-[20px] h-auto w-full overflow-y-scroll">
+            <div className="flex flex-row gap-4 h-full bg-amber-300 rounded-[12px] p-[12px] outline-[1px] outline-[#9c9c9cee]">
               <div
                 id="draftcepat"
-                className="flex h-auto flex-col bg-[#ebebeb] p-[20px] gap-[12px] w-[600px] rounded-[12px]  "
+                className="flex h-auto flex-col bg-[#ebebeb] p-[20px] gap-[12px] w-[60%] rounded-[12px]  "
               >
                 <h4 className="self-start">Draft Cepat</h4>
-                <Fieldset className="space-y-8">
+                <Fieldset className="space-y-[8px]">
                   <Field>
-                    <Label className="block font-bold"> Judul Postingan</Label>
+                    <Label className="block font-normal ">
+                      {" "}
+                      Judul Postingan
+                    </Label>
                     <Input
-                      className="mt-1 block outline-1 w-full h-[36px] rounded-[8px] p-[8px] bg-white "
+                      className="mt-1 block  w-full h-[40px] rounded-[8px] px-[16px] py-[8px] bg-white "
                       name="judulpostingandraft"
+                      placeholder="Judul Postingan"
+                      defaultValue={""}
                     />
                   </Field>
                   <Field>
-                    <Label className="block font- ">Kategori</Label>
+                    <Label className="block font-normal ">Kategori</Label>
                     <Select
-                      className="mt-1 block outline-1 w-full h-[36px] rounded-[8px] p-[8px] bg-white "
+                      className="mt-1  block ring-blue-600 w-full h-[40px] rounded-[8px] px-[16px] py-[8px] bg-white "
                       name="Kategoripostingandraft"
                     >
-                      <option>Canada</option>
-                      <option>Mexico</option>
-                      <option>United States</option>
+                      <option>Inspirasi</option>
+                      <option>Edukasi</option>
+                      <option>Kegiatan</option>
                     </Select>
                   </Field>
-                  <Field>
-                    <Label className="block font">Konten Postingan</Label>
-                    <Textarea
-                      className="mt-1 block outline-1 w-full h-auto rounded-[8px] p-[8px] resize-none bg-white overflow-y-scroll"
-                      name="kontenpostingandraft"
-                      rows={9}
-                      placeholder="Tulis Konten Postingan"
-                    />
+                  <Field className={"flex flex-col gap-2"}>
+                    <Label className="block font-normal">
+                      Konten Postingan
+                    </Label>
+                    <div className="ring-2 ring-green-700 focus-within:ring-green-900 rounded-[8px] transition">
+                      <Editor
+                        tinymceScriptSrc="/tinymce/tinymce.min.js"
+                        licenseKey="gpl"
+                        onInit={(_evt, editor) => (editorRef.current = editor)}
+                        initialValue=""
+                        init={{
+                          language: "id",
+                          placeholder: "Tulis draft disini...",
+                          resize: false,
+                          branding: false,
+                          height: 200,
+                          menubar: false,
+                          plugins: [
+                            "advlist",
+                            "autolink",
+                            "lists",
+                            "link",
+                            "image",
+                            "charmap",
+                            "anchor",
+                            "searchreplace",
+                            "visualblocks",
+                            "code",
+                            "fullscreen",
+                            "insertdatetime",
+                            "media",
+                            "table",
+                            "preview",
+                            "help",
+                            "wordcount",
+                          ],
+                          toolbar:
+                            "undo redo | blocks | " +
+                            "bold italic forecolor | alignleft aligncenter " +
+                            "alignright alignjustify | bullist numlist outdent indent | " +
+                            "removeformat | help",
+                          content_style:
+                            "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+                        }}
+                      />
+                    </div>
+                    <button
+                      className="bg-[#1a6218] hover:bg-[#294728] text-white py-[12px] px-[8px] rounded-lg cursor-pointer"
+                      onClick={log}
+                    >
+                      Log editor content
+                    </button>
                   </Field>
                 </Fieldset>
               </div>
               <div
                 id="catatan"
-                className="flex h-full flex-col bg-[#ebebeb] p-[20px] gap-[12px] w-[300px] rounded-[12px] content-center items-center justify-s"
+                className="flex h-full flex-col bg-[#ebebeb] p-[20px] gap-[12px] w-[40%] rounded-[12px] content-center items-center justify-s"
               >
                 <h4 className="self-start">Notes</h4>
                 <ul className="flex flex-col gap-[12px] list-disc w-full ">
@@ -125,8 +181,144 @@ const Dashboard = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex flex-row gap-4 bg-amber-300 rounded-[12px] overflow-hidden p-[12px] outline-[1px] outline-[#9c9c9cee]">
-              <img className="" src="https://placehold.co/380x280" />
+            <div className="flex flex-row gap-4 bg-amber-300 rounded-[12px] p-[12px] outline-[1px] outline-[#9c9c9cee]">
+              <div className="w-full overflow-x-auto overflow-y-auto">
+                <Table hoverable className="min-w-full w-full table-auto">
+                  <TableHead>
+                    <TableRow>
+                      <TableHeadCell className="text-[16px]">
+                        Product name
+                      </TableHeadCell>
+                      <TableHeadCell className="text-[16px]">
+                        Color
+                      </TableHeadCell>
+                      <TableHeadCell className="text-[16px]">
+                        Category
+                      </TableHeadCell>
+                      <TableHeadCell className="text-[16px]">
+                        Price
+                      </TableHeadCell>
+                      <TableHeadCell>
+                        <span className="text-[12pt]">Tindakan</span>
+                      </TableHeadCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody className="divide-y">
+                    <TableRow className="bg-white">
+                      <TableCell className="font-medium text-gray-900 ">
+                        Apple MacBook Pro 17"
+                      </TableCell>
+                      <TableCell>Sliver</TableCell>
+                      <TableCell>Laptop</TableCell>
+                      <TableCell>$2999</TableCell>
+                      <TableCell>
+                        <a
+                          href="#"
+                          className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                        >
+                          Edit
+                        </a>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow className="bg-white ">
+                      <TableCell className="font-medium text-gray-900 ">
+                        Microsoft Surface Pro
+                      </TableCell>
+                      <TableCell>White</TableCell>
+                      <TableCell>Laptop PC</TableCell>
+                      <TableCell>$1999</TableCell>
+                      <TableCell>
+                        <a
+                          href="#"
+                          className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                        >
+                          Edit
+                        </a>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow className="bg-white ">
+                      <TableCell className="font-medium text-gray-900 ">
+                        Magic Mouse 2
+                      </TableCell>
+                      <TableCell>Black</TableCell>
+                      <TableCell>Accessories</TableCell>
+                      <TableCell>$99</TableCell>
+                      <TableCell>
+                        <a
+                          href="#"
+                          className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                        >
+                          Edit
+                        </a>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow className="bg-white ">
+                      <TableCell className="font-medium text-gray-900 ">
+                        Microsoft Surface Pro
+                      </TableCell>
+                      <TableCell>White</TableCell>
+                      <TableCell>Laptop PC</TableCell>
+                      <TableCell>$1999</TableCell>
+                      <TableCell>
+                        <a
+                          href="#"
+                          className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                        >
+                          Edit
+                        </a>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow className="bg-white ">
+                      <TableCell className="font-medium text-gray-900 ">
+                        Microsoft Surface Pro
+                      </TableCell>
+                      <TableCell>White</TableCell>
+                      <TableCell>Laptop PC</TableCell>
+                      <TableCell>$1999</TableCell>
+                      <TableCell>
+                        <a
+                          href="#"
+                          className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                        >
+                          Edit
+                        </a>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow className="bg-white ">
+                      <TableCell className="font-medium text-gray-900 ">
+                        Microsoft Surface Pro
+                      </TableCell>
+                      <TableCell>White</TableCell>
+                      <TableCell>Laptop PC</TableCell>
+                      <TableCell>$1999</TableCell>
+                      <TableCell>
+                        <a
+                          href="#"
+                          className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                        >
+                          Edit
+                        </a>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow className="bg-white ">
+                      <TableCell className="font-medium text-gray-900 ">
+                        Microsoft Surface Pro
+                      </TableCell>
+                      <TableCell>White</TableCell>
+                      <TableCell>Laptop PC</TableCell>
+                      <TableCell>$1999</TableCell>
+                      <TableCell>
+                        <a
+                          href="#"
+                          className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
+                        >
+                          Edit
+                        </a>
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </div>
             </div>
           </div>
         </div>

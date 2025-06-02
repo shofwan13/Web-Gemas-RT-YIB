@@ -29,6 +29,29 @@ const cardData = [
 ];
 
 const Home = () => {
+  const [judul, setJudul] = useState("Judul Postingan");
+  const [deskripsi, setDeskripsi] = useState(
+    "ini adalah contoh deskripsi pendek untuk postingan ini."
+  );
+  const [tanggal, setTanggal] = useState("2024-06-01");
+  const [img, setImg] = useState("https://placehold.co/100x100");
+
+  useEffect(() => {
+    fetch("https://dummy-json.mock.beeceptor.com/posts")
+      .then((res) => {
+        console.log(res);
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.judul) setJudul(data.judul);
+        if (data.deskripsi) setDeskripsi(data.deskripsi);
+        if (data.tanggal) setTanggal(data.tanggal);
+        if (data.img) setImg(data.img);
+      })
+      .catch(() => {
+        // fallback tetap pakai default
+      });
+  }, []);
   return (
     <div>
       <MainHeader />
@@ -62,6 +85,46 @@ const Home = () => {
         </div>
       </section>
       <section
+        id="mengenaigemasrt"
+        className="bg-[#f8f8f8] h-[100%] py-[64px] sm:px-[8px] flex gap-4 items-center justify-center flex-row"
+      >
+        <div className="flex-row lg:flex lg:w-[1440px] px-2 justify-center content-center items-center gap-y-4">
+          <div className="flex item flex-wrap w-auto lg:w-[50%] h-[100%] justify-center items-center flex-col space-y-[28px]">
+            <div className="space-y-[8px] items-start text-left lg:pr-[64px]">
+              <div className="flex justify-start items-start">
+                <img
+                  className="bg-[#f8f8f8] outline-[#cbcbcb] outline-1 rounded-lg"
+                  src="https://placehold.co/100x100"
+                  alt="Placeholder"
+                />
+              </div>
+              <h1>Gerakan GEMAS-RT</h1>
+              <p>
+                Gerakan Gemas RT adalah inisiatif yang bertujuan untuk
+                memberdayakan masyarakat dalam mengelola sampah rumah tangga.
+                Dimulai dari kepedulian pemuda terhadap lingkungan sekitar,
+                Gerakan Gemas RT bertransformasi menjadi pionir dan pergerakan
+                sosial yang memiliki tujuan utama dalam pengelolaan dan
+                penanggualan masalah sampah di Indonesia dengan pendekatan yang
+                berkelanjutan.
+              </p>
+            </div>
+          </div>
+          <div className="flex item flex-wrap w-auto lg:w-[50%] h-[100%] justify-end items-end flex-col space-y-[28px]">
+            <div className="space-y-[8px] items-center text-center">
+              <div className="flex justify-end items-end">
+                <video
+                  className="bg-[#f8f8f8] outline-[#cbcbcb] outline-1 rounded-lg"
+                  src="https://www.w3schools.com/html/mov_bbb.mp4"
+                  width={1000}
+                  autoPlay
+                ></video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
         id="pengelolaansampahberkelanjutan"
         className="bg-[#f8f8f8] h-[100%] py-[64px] sm:px-[8px] flex gap-4 items-center justify-center flex-row"
       >
@@ -77,8 +140,8 @@ const Home = () => {
               </div>
               <h1>Pengelolaan Sampah Berkelanjutan</h1>
               <p>
-                Pelajari bagaimana kami mengelola dan mengontrol jumlah sampah
-                rumah tangga dengan pendekatan yang berkelanjutan
+                Pelajari bagaimana kami mengelola dan mengendalikan sampah rumah
+                tangga secara berkelanjutan
               </p>
             </div>
           </div>
@@ -117,6 +180,62 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section
+        id="updateterbaru"
+        className="bg-[#f8f8f8] h-[100%] py-[64px] sm:px-[8px] flex gap-4 items-center justify-center flex-row"
+      >
+        <div className="flex-wrap lg:flex lg:w-[1440px] px-2 justify-center content-center items-center gap-y-4">
+          <div className="flex item flex-wrap w-auto lg:w-[540px] h-[100%] justify-center items-center flex-col space-y-[28px]">
+            <div className="space-y-[8px] items-center text-center">
+              <div className="flex justify-center items-center">
+                <img
+                  className="bg-[#f8f8f8] outline-[#cbcbcb] outline-1 rounded-lg"
+                  src="https://placehold.co/100x100"
+                  alt="Placeholder"
+                />
+              </div>
+              <h1>Pengelolaan Sampah Berkelanjutan</h1>
+              <p>
+                Pelajari bagaimana kami mengelola dan mengontrol jumlah sampah
+                rumah tangga dengan pendekatan yang berkelanjutan
+              </p>
+            </div>
+          </div>
+          <div className=" w-full flex flex-col space-y-[28px] items-center justify-center h-[100%]">
+            <div className="flex flex-wrap w-full justify-center items-center gap-4 h-[100%]">
+              <Card className="bg-[#f0efef!important] h-[100%] w-[100%] lg:w-[32.5%] border-1 border-[#cbcbcb] ">
+                <img
+                  className="w-[400x] h-[320px]"
+                  src={cardData[0].img}
+                  alt={cardData[0].title}
+                />
+                <h5 className="text-2xl font-bold tracking-tight">{judul}</h5>
+                <div className="p-2 flex gap-2 flex-row outline-1 outline-[#cbcbcb] rounded-lg">
+                  <FontAwesomeIcon
+                    icon="fa-solid fa-calendar"
+                    className="text-gray-500"
+                  />
+                  <span>{tanggal ? tanggal : "6/04/2024"}</span>
+                </div>
+                <p className="font-normal text-gray-700">{deskripsi}</p>
+                <ExpandableButtonCard
+                  text="Selengkapnya"
+                  onClick={() => {
+                    const element = document.getElementById(
+                      "pengelolaansampahberkelanjutan"
+                    );
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                />
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section
         id="galerikegiatan"
         className="bg-[#f8f8f8] py-[64px] h-[100%] sm:px-[8px] flex gap-4 items-center justify-center flex-row  "

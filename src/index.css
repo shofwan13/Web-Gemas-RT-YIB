@@ -15,14 +15,6 @@ body {
   border: #cbcbcb;
 }
 
-/*Quil CSS*/
-.controls {
-  display: flex;
-  border: 1px solid #ccc;
-  border-top: 0;
-  padding: 10px;
-}
-
 .controls-right {
   margin-left: auto;
 }
